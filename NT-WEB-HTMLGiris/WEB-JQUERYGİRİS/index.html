@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #liste {
+            width: 200px;
+            height: 400px;
+            background-color: lightblue;
+        }
+        .genel{
+            width:200px;
+            height:300px;
+            background-color:darksalmon;
+        }
+    </style>
+    <script src="Jquery-3.3.1.js"></script>
+    <script> 
+        $(document).ready(function () {
+            $("#btnEkle").click(function () {
+                var metin = $("#txtAd").val();
+                metin = metin + "<br/>";
+                $("#liste").append(metin);
+                $("#txtAd").val("");
+                $("#txtAd").focus();
+            })
+            $("#btnAcKapa").click(function () {
+                //$(".genel").fadeToggle();
+                //$(".genel").slideToggle();
+                $(".genel").toggle();
+
+            })
+            $("#btnRenkDegistir").click(function () {
+                var anlikRenk = $("#btnRenkDegistir").css("background-color");
+           
+                if (anlikRenk != "rgb(255, 0, 0)") {
+                    
+                    $("#btnRenkDegistir").css("background-color","red");
+                }
+                else {
+                   
+                    $("#btnRenkDegistir").css("background-color", "black");
+                }
+            })
+            $("#btnRastsalRenkDegistir").click(function () {
+                var redColor = Math.floor((Math.random() * 255));
+                var greenColor = Math.floor((Math.random() * 255));
+                var blueColor = Math.floor((Math.random() * 255));
+                var rgbString = "rgb(" + redColor + ", " + greenColor + ", " + blueColor + ")";
+                $(this).css("background-color", rgbString);
+        
+            })
+
+        });   
+        
+    </script>
+
+</head>
+<body>
+    Adı:<input type="text" id="txtAd" />
+    <input type="button" name="name" value="Ekle" id="btnEkle" />
+    <div id="liste"> </div>
+    <input type="button" value="Renk Degistir" id="btnRenkDegistir" />
+    <input type="button" value="Rastsal Renk Degistir" id="btnRastsalRenkDegistir" />
+    <br />
+    <br />
+    <div class="genel"></div>
+    <input type="button" value="DIV Aç/Kapa" id="btnAcKapa" />
+
+</body>
+</html>

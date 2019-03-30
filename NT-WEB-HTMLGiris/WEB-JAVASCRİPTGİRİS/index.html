@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function UyarıVer() {
+            alert("Uyarı!");
+        }
+       // 1.yol
+      //  window.onload = function () {
+      //      document.getElementById("btnEkle").onclick = function Ekle() {
+      //         var txtIsımRef= document.getElementById("txtEkle");
+      //          var metin = txtIsımRef.value;
+      //          metin = metin + "<br/>";
+      //         document.getElementById("liste").innerHTML += metin;
+      //          txtIsımRef.value = "";
+      //          txtIsımRef.focus();
+                
+                
+      //  }
+      //}
+        //3.yol
+        function Ekle() {
+            var txtIsımRef = document.getElementById("txtEkle");
+            var metin = txtIsımRef.value;
+            metin = metin + "<br/>";
+            document.getElementById("liste").innerHTML += metin;
+            txtIsımRef.value = "";
+            txtIsımRef.focus();
+        }
+       
+    </script>
+
+    <style>
+        #liste{
+            width:150px;
+            height:400px;
+            background-color:lightgray;
+        }
+    </style>
+
+</head>
+<body>
+    Adı:  <input type="text" id="txtEkle" />
+    <input type="button" name="name" value="Ekle" id="btnEkle" onclick="Ekle()" />
+    <!--<input type="button" name="name" value="Uyarı Ver" onclick="UyarıVer()" />-->
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="liste"></div>
+    <!--<script>
+        2.yol
+        document.getElementById("btnEkle").onclick = function Ekle() {
+    var metin = document.getElementById("txtEkle").value;
+    document.getElementById("liste").innerHTML = metin;
+    }
+    </script>-->
+   
+</body>
+</html>

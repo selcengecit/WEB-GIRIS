@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #menu{
+            width:150px;
+            height:300px;
+            background-color:pink;
+            margin-left:-10px;
+            margin-top:100px;
+            border-top-right-radius:20px;
+            border-bottom-right-radius:20px;
+            float:left;
+
+        }
+        #AcKapa{
+            margin-top:120px;
+            cursor:pointer;
+        }
+    </style>
+    <script src="Jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#AcKapa").click(function () {
+                //toggle işlemini bitirdikten sonra aşagıdakı fonksıyon calısır.
+                $("#menu").toggle("slow", function () {
+                    //ıdsi menu olan elemanın display özelligini yani elemanın görünülürlüğü ile ilgili özelliğini al
+                    //ve dsp degıskenıne ata.
+                    var dsp = $("#menu").css("display");
+                    if (dsp == "none") { //kapalı anlamına gelir
+                        $("#Ackapa").attr("src", "Images/forward - 256.png")
+                    }
+                    else 
+                        $("#AcKapa").attr("src", "Images/back - 256.png")
+                    
+                })
+            })
+
+        })
+        //Divin(menu) gorunulurlugune gore oka yön ver div acık ise sol ok gorunsun kapalı ise sag ok gorunsun
+    </script>
+</head>
+<body>
+    <div id="menu"> </div>
+    <img id="AcKapa" src="Images/forward-256.png" />
+
+    <img src="Images/back-256.png" />
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿div{
+    width:200px;
+    height:150px;
+    background-color:steelblue;
+    border:4px solid black;
+    border-radius:15px;
+    float:left;
+    
+   
+}
+div:hover{
+    cursor:pointer;
+    background-color:red;
+    transition:1s;
+    transform:rotateX(180deg);
+}
+#animasyon:hover{
+  animation:AnimasyonYap 10s;
+  position:absolute;
+     /*Animation diye bir özellik vardır ama öncelikle dışarıda bu animasyonu tanımlamamız gerekir. (AnimasyonYap)*/
+}
+#sabit{
+    position:fixed;
+    margin-top:300px;
+
+}
+@keyframes AnimasyonYap{
+    0%{
+        transform:translate(0px,0px);
+        /*margin-top:0px;
+        margin-left:200px;*/
+
+    }
+    25% {
+        transform: translate(208px);
+        /*margin-top: 0px;
+        margin-left: 600px;*/
+    }
+    50% {
+        transform: translate(208px,500px);
+        /*margin-top: 500px;
+        margin-left: 600px;*/
+    }
+    75% {
+        transform: translate(0px,500px);
+        /*margin-top: 500px;
+        margin-left: 200px;*/
+    }
+    /*100% {
+      
+        /*margin-top: 0px;
+        margin-left: 200px;*/
+   
+}
